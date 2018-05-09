@@ -42,13 +42,11 @@ class VCSelectingImgViewController: UIViewController,UIImagePickerControllerDele
             let tiempoMilis:Int = Int((Date().timeIntervalSince1970 * 1000.0).rounded())
             let ruta:String = String(format: "perros/imagen%d.jpg", tiempoMilis)
             let imagenRef = DataHolder.sharedInstance.firStorageRef?.child(ruta)
-            
             let uploadTask = imagenRef?.putData(imgData!,metadata:nil){ (metadata,error)
                 in
                 guard let metadata = metadata else{
                     return
                 }
-                
                 let downloadURL = metadata.downloadURL
             }
         }
