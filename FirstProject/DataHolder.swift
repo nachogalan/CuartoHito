@@ -22,6 +22,7 @@ class DataHolder: NSObject {
     var arUsuarios:[Perfil] = []
     var firStorageRef:StorageReference?
     var sNickname:String = "QWERTY@gmail.com"
+     var sPassword:String = "123456"
     var imagenDescarga:[String:UIImage]? = [:]
     
     func initFireBase(){
