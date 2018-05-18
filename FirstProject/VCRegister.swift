@@ -37,7 +37,7 @@ class VCRegister: UIViewController, DataHolderDelegate {
         DataHolder.sharedInstance.miPerfil.sNombre = txtUser?.text
         DataHolder.sharedInstance.miPerfil.iFecha = 1900
         DataHolder.sharedInstance.miPerfil.sApellido = txtEmail?.text
-        
+            
         DataHolder.sharedInstance.crearUsuario(user: (txtEmail?.text)!, password: (txtPassword?.text)!, delegate: self)
         
         
